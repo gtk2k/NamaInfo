@@ -1,0 +1,15 @@
+{
+  "manifest_version": 2,
+  "name": "ニコ生の情報をWebSocketで送信",
+  "version": "0.0.6",
+  "description": "使用方法。放送のページを開けば送信されます。現在はじかにws://localhost:8080のWebSocketサーバーを指定しています。",
+  "content_scripts": [
+	{
+	  "matches": ["http://live.nicovideo.jp/watch/*"],
+	  "js": [
+		"cs.js"
+	  ],
+	  "run_at": "document_end"
+	}
+  ]
+}
